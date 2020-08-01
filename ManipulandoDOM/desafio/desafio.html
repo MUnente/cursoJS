@@ -1,0 +1,122 @@
+<!--Exercício 1
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            var containerElement = document.querySelector('#app');
+
+            var btnElement = document.createElement('button');
+            btnElement.setAttribute('class', 'botao');
+            var textElement = document.createTextNode('Clique aqui');
+            btnElement.appendChild(textElement);
+            containerElement.appendChild(btnElement);
+
+            btnElement.onclick = function(){
+                var divElement = document.createElement('div');
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                divElement.style.backgroundColor = '#f00';
+                containerElement.appendChild(divElement);
+            }
+        </script>
+    </body>
+</html>-->
+
+<!--Exercício 2
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            var containerElement = document.querySelector('#app');
+
+            var btnElement = document.createElement('button');
+            btnElement.setAttribute('class', 'botao');
+            var textElement = document.createTextNode('Passe o mouse aqui');
+            btnElement.appendChild(textElement);
+            containerElement.appendChild(btnElement);
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            btnElement.onmouseover = function(){
+                var divElement = document.createElement('div');
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                var newColor = getRandomColor();
+                divElement.style.backgroundColor = newColor;
+                containerElement.appendChild(divElement);
+            }
+        </script>
+    </body>
+</html>-->
+
+<!--Exercício 3
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            var containerElement = document.querySelector('#app');
+            var ulElement = document.createElement('ul');
+            containerElement.appendChild(ulElement);
+
+            for(let value of nomes){
+                var liElement = document.createElement('li');
+                var text = document.createTextNode(value);
+                liElement.appendChild(text);
+                ulElement.appendChild(liElement);
+            }
+        </script>
+    </body>
+</html>-->
+
+<!--Exercício 4-->
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button onclick="adicionar()">Adicionar</button>
+        </div>
+        <script>
+            var inputElement = document.querySelector('input[name=nome]');
+            var containerElement = document.querySelector('#app');
+            var ulElement = document.createElement('ul');
+            containerElement.appendChild(ulElement);
+            
+            function adicionar(){
+                //preencher lista
+                var nome = inputElement.value;
+                var liElement = document.createElement('li');
+                var text = document.createTextNode(nome);
+                liElement.appendChild(text);
+                ulElement.appendChild(liElement);
+
+                //limpar input
+                inputElement.value = '';
+            }
+        </script>
+    </body>
+</html>

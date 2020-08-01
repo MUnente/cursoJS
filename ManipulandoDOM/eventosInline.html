@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button onclick="mostraAlerta()">Me pressione</button>
+            <button onmouseover="mostraAlerta2()">Me acaricie</button>
+            <input type="text" onkeypress="mostraAlerta3()"/>
+        </div>
+        <script>
+            //Parte 1: Eventos Inline
+            function mostraAlerta(){
+                alert('Botão foi clicado');
+            }
+            function mostraAlerta2(){
+                alert('Botão foi acariciado');
+            }
+            function mostraAlerta3(){
+                alert('Alguma tecla digitada');
+            }
+        </script>
+    </body>
+</html>

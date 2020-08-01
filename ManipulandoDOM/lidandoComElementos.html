@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button id="botao">Clique</button>
+        </div>
+        <script>
+            //Parte 3: Lidando com Elementos
+
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'https://linktr.ee/murilomanente');
+            linkElement.setAttribute('title', 'Linktree do Murilo');
+            linkElement.setAttribute('target', '_blank'); //abrir em uma nova guia
+
+            var textElement = document.createTextNode('Acessar links do Murilo');
+            linkElement.appendChild(textElement);
+
+            //Jogando o linkElement no div#app
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            //Imaginando que já exista um elemento no html. Vamos somente add atributos
+            var btnElement = document.querySelector('#botao');
+            btnElement.setAttribute('class', 'btn1');
+            containerElement.appendChild(btnElement);
+
+            //Remover elementos
+            containerElement.removeChild(btnElement);
+        </script>
+    </body>
+</html>

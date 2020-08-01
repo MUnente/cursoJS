@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //Parte 6: Operadores Lógicos
+
+            //Uso do AND
+            var sexo = 'M', idade = 17;
+
+            if(sexo === 'M' &&  idade >= 18){
+                console.log('Ok');
+            }
+            else{
+                console.log('Não entra');
+            }
+
+            //Uso do OR
+            if(sexo === 'M' || idade >= 18){
+                console.log('Ok');
+            }
+            else{
+                console.log('Não entra');
+            }
+
+            //Uso do NOT
+            sexo = 'F';
+            if(sexo !== 'M'){
+                console.log('Não entra');
+            }
+            else{
+                console.log('Ok');
+            }
+
+            //Armazenando valores das condições em variáveis
+            sexo = 'M';
+
+            var masculino;
+
+            if(sexo === 'M'){
+                masculino = true;
+            }
+            else{
+                masculino = false;
+            }
+
+            console.log(masculino);
+
+            //Diminuindo esse código ainda mais
+            sexo = 'F';
+
+            masculino = (sexo === 'M');
+
+            console.log(masculino);
+        </script>
+    </body>
+</html>
